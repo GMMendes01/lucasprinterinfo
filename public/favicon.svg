@@ -1,15 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
   <defs>
     <style>
-      .trace-line { stroke: #FFFFFF; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .trace-node { fill: none; stroke: #FFFFFF; stroke-width: 4; }
-      .brand-title { font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 38px; fill: #FFFFFF; letter-spacing: 4px; }
-      .brand-sub { font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 21px; fill: #FFFFFF; letter-spacing: 6.5px; }
+      .trace-line { stroke: #FFFFFF; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .trace-node { fill: none; stroke: #FFFFFF; stroke-width: 5; }
     </style>
   </defs>
 
-  <!-- Circuit Icon -->
-  <g transform="translate(10, 10)">
+  <!-- Dark rounded background so the white mark stays visible on light browser tabs -->
+  <rect width="180" height="180" rx="38" fill="#1F1F27"/>
+
+  <!-- Circuit mark -->
+  <g transform="translate(3.5, 12.5)">
     <!-- Circuit Node 1 (Top left) -->
     <circle cx="50" cy="35" r="12" class="trace-node" />
     <path d="M 62 35 L 75 35 L 90 50 L 155 50" class="trace-line" />
@@ -26,8 +27,4 @@
     <circle cx="55" cy="120" r="12" class="trace-node" />
     <path d="M 67 120 L 90 120 L 105 105 L 155 105" class="trace-line" />
   </g>
-
-  <!-- Typography -->
-  <text x="185" y="80" class="brand-title">PRINTER</text>
-  <text x="185" y="112" class="brand-sub">INFORMÁTICA</text>
 </svg>
