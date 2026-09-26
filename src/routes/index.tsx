@@ -46,6 +46,43 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="overflow-hidden bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Printer Informática",
+            description: "Manutenção e conserto de impressoras em São Paulo. Troca de consumíveis, troca de peças e configuração Wi-Fi com visita técnica.",
+            telephone: "+55-11-99015-3067",
+            url: "https://lucasprinterinfo.lovable.app/",
+            image: "https://lucasprinterinfo.lovable.app/__l5e/assets-v1/cae75bd1-5be9-483a-b8eb-13e45696555c/printer-source-0.jpg",
+            priceRange: "$$",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "São Paulo",
+              addressRegion: "SP",
+              addressCountry: "BR",
+            },
+            areaServed: "São Paulo e região",
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                opens: "08:00",
+                closes: "18:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Friday",
+                opens: "08:00",
+                closes: "17:00",
+              },
+            ],
+          }),
+        }}
+      />
+
       <header className="relative z-20 bg-ink text-ink-foreground">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-6 md:h-28 md:px-10">
           <a href="#inicio" className="block w-44 shrink-0 md:w-56" aria-label="Printer Informática — início">
