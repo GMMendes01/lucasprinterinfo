@@ -18,6 +18,7 @@ const services = [
 ];
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Printer Informática | Conserto e manutenção de impressoras em São Paulo" },
