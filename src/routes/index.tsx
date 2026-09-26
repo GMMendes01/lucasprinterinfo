@@ -21,11 +21,23 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Printer Informática | Conserto e manutenção de impressoras em São Paulo" },
-      { name: "description", content: "Manutenção de impressoras delivery em São Paulo. Visita técnica, troca de consumíveis, troca de peças e configuração Wi-Fi. Fale com a Printer Informática." },
-      { property: "og:title", content: "Printer Informática | Manutenção de impressoras" },
-      { property: "og:description", content: "Conserto de impressoras com visita técnica no local em São Paulo. Agende pelo WhatsApp." },
+      { name: "description", content: "Manutenção de impressoras delivery em São Paulo. Visita técnica, troca de consumíveis, troca de peças e configuração Wi-Fi. Agende pelo WhatsApp (11) 99015-3067." },
+      { name: "keywords", content: "manutenção de impressoras, conserto de impressoras, São Paulo, troca de toner, troca de peças, impressora Wi-Fi, assistência técnica" },
+      { property: "og:site_name", content: "Printer Informática" },
+      { property: "og:title", content: "Printer Informática | Conserto e manutenção de impressoras em São Paulo" },
+      { property: "og:description", content: "Manutenção de impressoras delivery em São Paulo. Visita técnica, troca de consumíveis, troca de peças e configuração Wi-Fi. Agende pelo WhatsApp." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://lucasprinterinfo.lovable.app/" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:image", content: "https://lucasprinterinfo.lovable.app/__l5e/assets-v1/cae75bd1-5be9-483a-b8eb-13e45696555c/printer-source-0.jpg" },
+      { property: "og:image:alt", content: "Técnico da Printer Informática atendendo uma impressora" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Printer Informática | Conserto e manutenção de impressoras em São Paulo" },
+      { name: "twitter:description", content: "Manutenção de impressoras delivery em São Paulo. Visita técnica, troca de consumíveis, troca de peças e configuração Wi-Fi." },
+      { name: "twitter:image", content: "https://lucasprinterinfo.lovable.app/__l5e/assets-v1/cae75bd1-5be9-483a-b8eb-13e45696555c/printer-source-0.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://lucasprinterinfo.lovable.app/" },
     ],
   }),
   component: Index,
@@ -34,6 +46,43 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="overflow-hidden bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Printer Informática",
+            description: "Manutenção e conserto de impressoras em São Paulo. Troca de consumíveis, troca de peças e configuração Wi-Fi com visita técnica.",
+            telephone: "+55-11-99015-3067",
+            url: "https://lucasprinterinfo.lovable.app/",
+            image: "https://lucasprinterinfo.lovable.app/__l5e/assets-v1/cae75bd1-5be9-483a-b8eb-13e45696555c/printer-source-0.jpg",
+            priceRange: "$$",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "São Paulo",
+              addressRegion: "SP",
+              addressCountry: "BR",
+            },
+            areaServed: "São Paulo e região",
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                opens: "08:00",
+                closes: "18:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Friday",
+                opens: "08:00",
+                closes: "17:00",
+              },
+            ],
+          }),
+        }}
+      />
+
       <header className="relative z-20 bg-ink text-ink-foreground">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-6 md:h-28 md:px-10">
           <a href="#inicio" className="block w-44 shrink-0 md:w-56" aria-label="Printer Informática — início">
