@@ -79,6 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "Printer Informática" },
+      {
+        name: "google-site-verification",
+        content: "Rf_b2962NimRgl8dsqJmHwAvw5VmID7VozUSL5w6JJI",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
