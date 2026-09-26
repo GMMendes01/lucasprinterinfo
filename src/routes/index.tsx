@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, ArrowUpRight, Clock3, MapPin, Phone, Wrench, Wifi } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Clock3, MapPin, Phone, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-printer.svg";
 import heroImage from "@/assets/printer-source-0.jpg.asset.json";
@@ -35,7 +35,7 @@ function Index() {
   return (
     <main className="overflow-hidden bg-background">
       <header className="relative z-20 bg-ink text-ink-foreground">
-        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-6 md:h-28 md:px-10">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-6 md:h-28 md:px-10">
           <a href="#inicio" className="block w-44 shrink-0 md:w-56" aria-label="Printer Informática — início">
             <img src={logo} alt="Printer Informática" className="h-auto w-full" />
           </a>
@@ -54,10 +54,10 @@ function Index() {
       <section id="inicio" className="relative isolate min-h-[620px] bg-ink text-ink-foreground sm:min-h-[660px] lg:min-h-[690px]">
         <img src={heroImage.url} alt="Técnico atendendo uma impressora" className="absolute inset-0 -z-20 h-full w-full object-cover object-[42%_center]" fetchPriority="high" />
         <div className="hero-shade absolute inset-0 -z-10" />
-        <div className="mx-auto flex min-h-[620px] max-w-7xl flex-col justify-center px-6 pb-20 pt-16 sm:min-h-[660px] md:px-10 lg:min-h-[690px]">
+        <div className="mx-auto flex min-h-[620px] max-w-7xl flex-col justify-center px-6 pb-16 pt-8 sm:min-h-[660px] sm:pt-16 md:px-10 lg:min-h-[690px]">
           <div className="max-w-3xl">
             <p className="mb-7 flex items-center gap-3 text-xs font-bold uppercase text-signal"><span className="h-2 w-2 bg-signal" /> PRINTER INFORMÁTICA · SÃO PAULO</p>
-            <h1 className="font-display text-[clamp(4rem,8vw,8rem)] font-bold uppercase leading-[0.87] text-ink-foreground">Sua impressora<br /><span className="text-signal">funcionando.</span><br />Seu dia fluindo.</h1>
+            <h1 className="font-display text-[3.5rem] font-bold uppercase leading-[0.87] text-ink-foreground sm:text-[clamp(4rem,8vw,8rem)]">Sua impressora<br /><span className="text-signal">funcionando.</span><br />Seu dia fluindo.</h1>
             <p className="mt-8 max-w-lg text-base leading-relaxed text-ink-foreground/85 md:text-lg">Conserto e manutenção de impressoras com atendimento no local. Qualidade, praticidade e eficiência para você seguir em frente.</p>
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <Button asChild className="h-14 rounded-sm bg-signal px-7 text-sm font-bold uppercase text-signal-foreground shadow-none hover:bg-signal/90">
@@ -74,7 +74,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="atendimento" className="bg-ink py-20 text-ink-foreground md:py-28">
+      <section id="atendimento" className="bg-ink py-10 text-ink-foreground md:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-[1fr_1.05fr] md:gap-20 md:px-10">
           <div className="relative aspect-[5/4] overflow-hidden bg-secondary md:aspect-[4/4]">
             <img src={deliveryImage.url} alt="Impressora multifuncional para atendimento técnico" className="h-full w-full object-cover" loading="lazy" />
